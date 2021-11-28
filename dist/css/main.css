@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #3F3F3F;
+}
+
+a {
+  color: #195BFF;
+  text-decoration: none;
+}
+
+H1 {
+  font-weight: 500;
+  text-align: center;
+  color: #0C213A;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+form p {
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  margin: 25px auto;
+}
+
+button {
+  outline: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #195BFF;
+  color: white;
+  border-radius: 10px;
+  width: 154px;
+  height: 50px;
+}
+
+input {
+  width: 400px;
+  height: 50px;
+  background-color: #FDFDFD;
+  border: 2px solid #F0F0F0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 10px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  outline: none;
+  padding-left: 10px;
+  margin: 0 auto;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.check-box {
+  position: relative;
+  padding: 0px 26px;
+  font-size: 12px;
+}
+
+.check-box::before {
+  content: "";
+  background: url("/images/tick-square.svg");
+  background-position: center;
+  background-size: cover;
+  width: 21px;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  -webkit-transform: scale(1) rotateZ(90deg);
+          transform: scale(1) rotateZ(90deg);
+  -webkit-transition: all 0.4s cubic-bezier(0.54, 0.01, 0, 1.49);
+  transition: all 0.4s cubic-bezier(0.54, 0.01, 0, 1.49);
+}
+
+input[type="checkbox"]:checked + .check-box::before {
+  -webkit-transform: scale(1) rotateZ(0deg);
+          transform: scale(1) rotateZ(0deg);
+  opacity: 1;
+}
+
+input[type="checkbox"]:checked + .check-box::after {
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  border: 2px solid #195BFF;
+  background: #195BFF;
+  z-index: -1;
+}
+
+.check-box::after {
+  content: "";
+  border: 2px solid #F0F0F0;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  left: 0.6px;
+  top: 0px;
+  border-radius: 6px;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+input:active,
+input:focus {
+  border-color: #195BFF;
+}
+
+label {
+  font-weight: 500;
+  margin: 20px 23px;
+  font-size: 14px;
+}
+
+.btn-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 -10px;
+}
+
+.btn-holder p {
+  font-size: 12px;
+  font-weight: 500;
+  margin: 25px 0;
+}
+
+.container {
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.container .img-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .img-container .img {
+  background: url("/images/claudia-aguilar-KJuudFTho44-unsplash.jpg");
+  -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
+          transform: matrix(-1, 0, 0, 1, 0, 0);
+  border-radius: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 95vh;
+  width: 95%;
+}
+
+.container .form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.container .form-container .close-circle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.container .form-container .auth-methos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .form-container .auth-methos p {
+  margin: 0;
+}
+
+.container .form-container .auth-methos .facebook, .container .form-container .auth-methos .google, .container .form-container .auth-methos .apple {
+  margin: 10px;
+  width: 128px;
+  height: 50px;
+  background: #FDFDFD;
+  border: 2px solid #F0F0F0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 10px;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+::-webkit-input-placeholder {
+  color: #B5B5B5;
+  font-size: 14px;
+}
+
+:-ms-input-placeholder {
+  color: #B5B5B5;
+  font-size: 14px;
+}
+
+::-ms-input-placeholder {
+  color: #B5B5B5;
+  font-size: 14px;
+}
+
+::placeholder {
+  color: #B5B5B5;
+  font-size: 14px;
+}
+/*# sourceMappingURL=main.css.map */

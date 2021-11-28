@@ -1,0 +1,201 @@
+$main-color: #195BFF;
+$body-color: #3F3F3F;
+$input-background: #FDFDFD;
+$input-border-color: #F0F0F0;
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: $body-color ;
+}
+a {
+    color: $main-color;
+    text-decoration: none;
+}
+H1 {
+    font-weight: 500;
+    text-align: center;
+    color: #0C213A;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    p {
+        font-size: 12px;
+        font-weight: 500;
+        text-align: center;
+        margin: 25px auto;
+    }
+}
+button {
+    outline: none;
+    border: none;
+    font-size:14px;
+    font-weight: 500;
+    background-color: $main-color;
+    color: white;
+    border-radius: 10px;
+    width: 154px;
+    height: 50px;
+}
+button:hover {
+    cursor: pointer;
+}
+input {
+    width: 400px;
+    height: 50px;
+    background-color: $input-background;
+    border: 2px solid $input-border-color;
+    box-sizing: border-box;
+    border-radius: 10px;
+    transition: all 0.4s ease-in-out;
+    outline: none;
+    padding-left:10px;
+    margin: 0 auto;
+
+}
+input[type="checkbox"] {
+    display: none;
+}
+.check-box {
+    position: relative;
+    padding: 0px 26px;
+    font-size: 12px;
+}
+
+.check-box::before {
+    content: "";
+    background: url("/images/tick-square.svg");
+    background-position: center;
+    background-size: cover;
+    width: 21px;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    opacity: 0;
+ 
+    transform: scale(1) rotateZ(90deg);
+    transition: all 0.4s cubic-bezier(0.54, 0.01, 0, 1.49);
+}
+input[type="checkbox"]:checked + .check-box::before {
+    transform: scale(1) rotateZ(0deg);
+    opacity: 1;
+}
+
+input[type="checkbox"]:checked + .check-box::after {
+    transition: all 0.1s ease-in-out;
+
+    border: 2px solid $main-color;
+    background:$main-color;
+    z-index: -1;
+
+}
+.check-box::after {
+    content: "";
+    border: 2px solid #F0F0F0;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left: 0.6px;
+    top: 0px;
+    border-radius: 6px;
+    transition: all 0.1s ease-in-out;
+
+}
+.check-box:hover {
+    cursor: pointer;
+}
+
+input:active,
+input:focus
+{
+    border-color: $main-color;
+}
+
+label {
+    font-weight: 500;
+    margin: 20px 23px;
+    font-size: 14px;
+}
+.btn-holder {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 -10px;
+
+    p {
+        font-size: 12px;
+        font-weight: 500;
+        margin: 25px 0;
+    }
+}
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  
+    .img-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+   .img {
+  
+    background: url("/images/claudia-aguilar-KJuudFTho44-unsplash.jpg");
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    border-radius: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    height: 95vh;
+    width: 95%;
+   }
+}
+   .form-container {
+       display: flex;
+       justify-content: center;
+       align-items: center; 
+       position: relative;
+
+       .close-circle{
+           position: absolute;
+            top: 10px;
+            right: 10px;
+       }
+       .close-circle:hover{
+           cursor: pointer;
+       }
+     .auth-methos {
+         display: flex;
+         align-items: center;
+         p {
+             margin: 0;
+         }
+         .facebook,.google, .apple {
+            margin: 10px; 
+            width: 128px;
+            height: 50px;
+            background: #FDFDFD;
+            border: 2px solid #F0F0F0;
+            box-sizing: border-box;
+            border-radius: 10px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+         
+         }
+         .facebook,.google, .apple :hover {
+             cursor: pointer;
+         }
+     }
+     
+   }
+}
+::placeholder {
+    color: #B5B5B5;
+    font-size: 14px;
+}
