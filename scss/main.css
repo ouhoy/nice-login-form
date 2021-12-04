@@ -62,7 +62,7 @@ input {
   border-radius: 10px;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
-  outline: none;
+  outline: 0 solid white;
   padding-left: 10px;
   margin: 0 auto;
 }
@@ -127,11 +127,12 @@ input[type="checkbox"]:checked + .check-box::after {
 input:active,
 input:focus {
   border-color: #195BFF;
+  outline: 4px solid #195bff26;
 }
 
 label {
   font-weight: 500;
-  margin: 20px 23px;
+  margin: 15px 23px;
   font-size: 14px;
 }
 
@@ -264,5 +265,15 @@ label {
 ::placeholder {
   color: #B5B5B5;
   font-size: 14px;
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .container .img-container {
+    display: none;
+  }
 }
 /*# sourceMappingURL=main.css.map */
