@@ -127,7 +127,7 @@ input[type="checkbox"]:checked + .check-box::after {
 input:active,
 input:focus {
   border-color: #195BFF;
-  outline: 4px solid #195bff26;
+  outline: 1px solid #195BFF;
 }
 
 label {
@@ -222,7 +222,7 @@ label {
   margin: 0;
 }
 
-.container .form-container .auth-methos .facebook, .container .form-container .auth-methos .google, .container .form-container .auth-methos .apple {
+.container .form-container .auth-methos .facebook, .container .form-container .auth-methos .apple, .container .form-container .auth-methos .google {
   margin: 10px;
   width: 128px;
   height: 50px;

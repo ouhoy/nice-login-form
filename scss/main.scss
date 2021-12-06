@@ -113,7 +113,7 @@ input:active,
 input:focus
 {
     border-color: $main-color;
-    outline: 4px solid #195bff26;
+    outline: 1px solid $main-color;
 
 }
 
@@ -129,7 +129,7 @@ label {
     margin: 0 -10px;
 
     p {
-        font-size: 12px;
+        font-size: 12px; 
         font-weight: 500;
         margin: 25px 0;
     }
@@ -176,7 +176,7 @@ label {
          p {
              margin: 0;
          }
-         .facebook,.google, .apple {
+         .facebook,.apple ,.google {
             margin: 10px; 
             width: 128px;
             height: 50px;
@@ -206,6 +206,7 @@ label {
 
     .container {
         grid-template-columns: 1fr;
+        // grid-template-rows: 1fr;
         .img-container {
             display: none;
         }
